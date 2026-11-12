@@ -1,0 +1,100 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-subtle: var(--subtle);
+}
+
+:root {
+  --radius: 1.25rem;
+  --background: oklch(0.985 0.002 250);
+  --foreground: oklch(0.2 0.01 260);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.01 260);
+  --primary: oklch(0.55 0.17 252);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.955 0.004 250);
+  --secondary-foreground: oklch(0.2 0.01 260);
+  --muted: oklch(0.955 0.004 250);
+  --muted-foreground: oklch(0.52 0.01 260);
+  --subtle: oklch(0.72 0.008 260);
+  --accent: oklch(0.94 0.03 252);
+  --accent-foreground: oklch(0.45 0.16 252);
+  --destructive: oklch(0.6 0.2 27);
+  --border: oklch(0.91 0.004 260);
+  --input: oklch(0.91 0.004 260);
+  --ring: oklch(0.55 0.17 252);
+  --shadow-soft: 0 30px 60px -30px oklch(0.2 0.02 260 / 0.18);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Slide stage */
+.slide-content {
+  width: 1920px; height: 1080px; position: relative; overflow: hidden;
+  background: var(--background);
+  --slide-title-lg: 120px; --slide-title: 88px; --slide-subtitle: 52px;
+  --slide-body-lg: 40px; --slide-body: 32px; --slide-caption: 24px;
+  --slide-kicker: 22px; --slide-chrome: 20px;
+}
+.slide-title-lg { font-size: var(--slide-title-lg); line-height: 1; letter-spacing: -0.045em; font-weight: 700; }
+.slide-title { font-size: var(--slide-title); line-height: 1.04; letter-spacing: -0.04em; font-weight: 700; }
+.slide-subtitle { font-size: var(--slide-subtitle); line-height: 1.15; letter-spacing: -0.025em; font-weight: 600; }
+.slide-body-lg { font-size: var(--slide-body-lg); line-height: 1.25; letter-spacing: -0.01em; }
+.slide-body { font-size: var(--slide-body); line-height: 1.32; }
+.slide-caption { font-size: var(--slide-caption); line-height: 1.3; }
+.slide-kicker { font-size: var(--slide-kicker); line-height: 1.1; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; }
+.slide-chrome { font-size: var(--slide-chrome); line-height: 1.15; white-space: nowrap; }
+
+.card-soft { background: var(--card); border: 1px solid var(--border); border-radius: 28px; box-shadow: var(--shadow-soft); }
+
+/* Transitions */
+@keyframes slide-in { from { opacity: 0; transform: scale(1.015); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes rise { from { opacity: 0; transform: translateY(36px); } to { opacity: 1; transform: none; } }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes wave { 0% { transform: scale(0.4); opacity: 0.7; } 100% { transform: scale(1.6); opacity: 0; } }
+@keyframes travel { 0% { left: 0%; opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { left: 100%; opacity: 0; } }
+@keyframes draw { from { stroke-dashoffset: 3000; } to { stroke-dashoffset: 0; } }
+
+.slide-enter { animation: slide-in 900ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+.reveal { animation: rise 900ms cubic-bezier(0.22, 1, 0.36, 1) both; animation-delay: calc(var(--d, 0) * 110ms + 200ms); }
+.reveal-fade { animation: fade 1200ms ease both; animation-delay: calc(var(--d, 0) * 110ms + 200ms); }
+.wave-ring { animation: wave 2.4s ease-out infinite; }
+.packet { animation: travel 2.6s cubic-bezier(0.45, 0, 0.55, 1) infinite; }
+.draw-path { stroke-dasharray: 3000; animation: draw 2.4s ease-out 0.5s both; }
+
+@media print {
+  @page { size: 1920px 1080px; margin: 0; }
+}
