@@ -95,13 +95,6 @@ export default function Slide7Conclusion() {
               <p className="slide-subtitle font-bold text-gray-900">Thank you.</p>
               <p className="text-[14px] text-gray-500 mt-0.5">Questions & Open Discussion</p>
             </div>
-
-            <div className="flex items-center gap-2 rounded-full bg-white px-4 py-2 border border-blue-200 shadow-xs">
-              <span className="h-2 w-2 rounded-full bg-emerald-500" />
-              <span className="font-mono text-xs font-semibold text-blue-600">
-                LoRa Complete
-              </span>
-            </div>
           </div>
         </div>
       </div>
