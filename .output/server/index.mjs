@@ -19,49 +19,49 @@ var public_assets_data_default = {
 	"/robots.txt": {
 		"type": "text/plain; charset=utf-8",
 		"etag": "\"a0-CKGXSIe7TSsqDTmGm/nY1t/o5d0\"",
-		"mtime": "2026-11-12T05:35:49.684Z",
+		"mtime": "2026-11-12T05:50:23.299Z",
 		"size": 160,
 		"path": "../public/robots.txt"
 	},
 	"/assets/farm-CLMjmcGs.jpg": {
 		"type": "image/jpeg",
 		"etag": "\"256f3-SHS1fqIB+nyqj136YKhpKJcWYpA\"",
-		"mtime": "2026-11-12T05:35:49.332Z",
+		"mtime": "2026-11-12T05:50:22.946Z",
 		"size": 153331,
 		"path": "../public/assets/farm-CLMjmcGs.jpg"
 	},
-	"/assets/routes-BKswY3jm.js": {
+	"/assets/routes-DFEOkdLp.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"5d46-lMi4hPqzR90pnQC3HDCAqucjdHY\"",
-		"mtime": "2026-11-12T05:35:49.331Z",
-		"size": 23878,
-		"path": "../public/assets/routes-BKswY3jm.js"
-	},
-	"/assets/styles-CDBaUIzX.css": {
-		"type": "text/css; charset=utf-8",
-		"etag": "\"11fb6-osMMEiDpBccXU/u9DT968MqqVGA\"",
-		"mtime": "2026-11-12T05:35:49.333Z",
-		"size": 73654,
-		"path": "../public/assets/styles-CDBaUIzX.css"
+		"etag": "\"127c6-dNAgZNcLI2ke3uWPUuF/VS4+vNA\"",
+		"mtime": "2026-11-12T05:50:22.945Z",
+		"size": 75718,
+		"path": "../public/assets/routes-DFEOkdLp.js"
 	},
 	"/assets/lora-module-DDRca2v-.jpg": {
 		"type": "image/jpeg",
 		"etag": "\"1bd9b-ppbmWqVpR1tMDsn0XQZiLm+Vtsk\"",
-		"mtime": "2026-11-12T05:35:49.333Z",
+		"mtime": "2026-11-12T05:50:22.946Z",
 		"size": 114075,
 		"path": "../public/assets/lora-module-DDRca2v-.jpg"
 	},
-	"/assets/index-wedLLRdz.js": {
+	"/assets/index-mpEq296L.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"530b0-ewrGQEI84nPU4i5WRRu6If3gfyA\"",
-		"mtime": "2026-11-12T05:35:49.327Z",
-		"size": 340144,
-		"path": "../public/assets/index-wedLLRdz.js"
+		"etag": "\"5311a-6snIbeoJZb3f2Px0GKuqn4Ju73Q\"",
+		"mtime": "2026-11-12T05:50:22.944Z",
+		"size": 340250,
+		"path": "../public/assets/index-mpEq296L.js"
+	},
+	"/assets/styles-CUPkZQ2J.css": {
+		"type": "text/css; charset=utf-8",
+		"etag": "\"18990-eP9pUF4Dp4KrJiExjz0dOmuzRSA\"",
+		"mtime": "2026-11-12T05:50:22.946Z",
+		"size": 100752,
+		"path": "../public/assets/styles-CUPkZQ2J.css"
 	},
 	"/favicon.ico": {
 		"type": "image/vnd.microsoft.icon",
 		"etag": "\"4f95-3RXc3p2mhEAs1WBwaIvE0Y0uu0Y\"",
-		"mtime": "2026-11-12T05:35:49.684Z",
+		"mtime": "2026-11-12T05:50:23.299Z",
 		"size": 20373,
 		"path": "../public/favicon.ico"
 	}
