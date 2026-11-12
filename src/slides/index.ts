@@ -13,5 +13,5 @@ export const slides = [
   { title: "LoRa Module", Component: Slide4Module },
   { title: "Communication", Component: Slide5Communicate },
   { title: "Applications", Component: Slide6Applications },
-  { title: "Recap & Quiz", Component: Slide7Conclusion },
+  { title: "Conclusion", Component: Slide7Conclusion },
 ];
