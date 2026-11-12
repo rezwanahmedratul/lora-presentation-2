@@ -1,5 +1,5 @@
 import { Sprout, Droplets, ParkingSquare, Leaf, Factory } from "lucide-react";
-import { SlideLayout, Question, d } from "@/components/deck/SlideLayout";
+import { SlideLayout, d } from "@/components/deck/SlideLayout";
 
 const apps = [
   { icon: Sprout,        label: "Smart agriculture & soil monitoring" },
@@ -37,19 +37,14 @@ export default function Slide6Applications() {
           ))}
         </div>
 
-        {/* Limits + Question */}
-        <div className="grid grid-cols-2 gap-8">
-          <div className="reveal rounded-2xl bg-gray-50 p-7" style={d(7)}>
-            <p className="text-[13px] font-semibold uppercase tracking-wider text-gray-400">Limitations</p>
-            <div className="mt-4 grid grid-cols-2 gap-x-8 gap-y-2.5">
-              {limits.map((l) => (
-                <p key={l} className="slide-caption text-gray-600">— {l}</p>
-              ))}
-            </div>
+        {/* Limitations */}
+        <div className="reveal rounded-2xl bg-gray-50 p-7 border border-gray-100" style={d(7)}>
+          <p className="text-[13px] font-semibold uppercase tracking-wider text-gray-400">Limitations</p>
+          <div className="mt-4 grid grid-cols-4 gap-8">
+            {limits.map((l) => (
+              <p key={l} className="slide-caption text-gray-600">— {l}</p>
+            ))}
           </div>
-          <Question delay={8}>
-            Which technology would you choose to monitor soil moisture across a large farm?
-          </Question>
         </div>
       </div>
     </SlideLayout>

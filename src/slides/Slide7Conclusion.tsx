@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { SlideLayout, d } from "@/components/deck/SlideLayout";
-import { Radio, ShieldCheck, Zap, Sparkles, Layers } from "lucide-react";
+import { Radio, ShieldCheck, Zap } from "lucide-react";
 
 const keyTakeaways = [
   {
@@ -55,11 +55,6 @@ export default function Slide7Conclusion() {
               <span className="packet absolute top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600" />
             </div>
             <Node title="Receiver" text={`ACK #${count} ✓`} screen />
-          </div>
-
-          <div className="reveal flex items-center gap-2 text-gray-400 text-xs font-mono" style={d(4)}>
-            <Sparkles size={14} className="text-blue-600" />
-            <span>Telemetry Link · 915 MHz ISM Band</span>
           </div>
         </div>
 
